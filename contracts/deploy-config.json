@@ -1,0 +1,554 @@
+{
+  "generated": "2026-09-20T11:28:58.214Z",
+  "decimals": 18,
+  "hulls": [
+    {
+      "id": "scout-01",
+      "name": "SCOUT-01",
+      "power": 100,
+      "price": "500000000000000000000",
+      "class": 0,
+      "levelRequired": 1,
+      "active": true
+    },
+    {
+      "id": "scout-02",
+      "name": "SCOUT-02",
+      "power": 160,
+      "price": "750000000000000000000",
+      "class": 0,
+      "levelRequired": 1,
+      "active": true
+    },
+    {
+      "id": "ranger",
+      "name": "RANGER",
+      "power": 260,
+      "price": "1100000000000000000000",
+      "class": 0,
+      "levelRequired": 1,
+      "active": true
+    },
+    {
+      "id": "prospector",
+      "name": "PROSPECTOR",
+      "power": 330,
+      "price": "1450000000000000000000",
+      "class": 1,
+      "levelRequired": 2,
+      "active": true
+    },
+    {
+      "id": "phantom",
+      "name": "PHANTOM",
+      "power": 420,
+      "price": "1800000000000000000000",
+      "class": 0,
+      "levelRequired": 2,
+      "active": true
+    },
+    {
+      "id": "hauler",
+      "name": "HAULER",
+      "power": 560,
+      "price": "2400000000000000000000",
+      "class": 1,
+      "levelRequired": 3,
+      "active": true
+    },
+    {
+      "id": "vanguard",
+      "name": "VANGUARD",
+      "power": 700,
+      "price": "3000000000000000000000",
+      "class": 2,
+      "levelRequired": 3,
+      "active": true
+    },
+    {
+      "id": "drillhead",
+      "name": "DRILLHEAD",
+      "power": 900,
+      "price": "3800000000000000000000",
+      "class": 1,
+      "levelRequired": 4,
+      "active": true
+    },
+    {
+      "id": "nova",
+      "name": "NOVA",
+      "power": 1200,
+      "price": "5000000000000000000000",
+      "class": 2,
+      "levelRequired": 5,
+      "active": true
+    },
+    {
+      "id": "excavator",
+      "name": "EXCAVATOR",
+      "power": 1550,
+      "price": "6400000000000000000000",
+      "class": 1,
+      "levelRequired": 6,
+      "active": true
+    },
+    {
+      "id": "aurora",
+      "name": "AURORA",
+      "power": 1900,
+      "price": "7800000000000000000000",
+      "class": 2,
+      "levelRequired": 7,
+      "active": true
+    },
+    {
+      "id": "titan",
+      "name": "TITAN",
+      "power": 2200,
+      "price": "9000000000000000000000",
+      "class": 3,
+      "levelRequired": 8,
+      "active": true
+    },
+    {
+      "id": "halcyon",
+      "name": "HALCYON",
+      "power": 2600,
+      "price": "10600000000000000000000",
+      "class": 2,
+      "levelRequired": 9,
+      "active": true
+    },
+    {
+      "id": "forge",
+      "name": "FORGE",
+      "power": 2900,
+      "price": "11800000000000000000000",
+      "class": 1,
+      "levelRequired": 9,
+      "active": true
+    },
+    {
+      "id": "warden",
+      "name": "WARDEN",
+      "power": 3400,
+      "price": "13800000000000000000000",
+      "class": 3,
+      "levelRequired": 10,
+      "active": true
+    },
+    {
+      "id": "dreadnought",
+      "name": "DREADNOUGHT",
+      "power": 4000,
+      "price": "16000000000000000000000",
+      "class": 4,
+      "levelRequired": 11,
+      "active": true
+    },
+    {
+      "id": "bastion",
+      "name": "BASTION",
+      "power": 4800,
+      "price": "19000000000000000000000",
+      "class": 3,
+      "levelRequired": 12,
+      "active": true
+    },
+    {
+      "id": "colossus",
+      "name": "COLOSSUS",
+      "power": 5800,
+      "price": "22500000000000000000000",
+      "class": 4,
+      "levelRequired": 14,
+      "active": true
+    },
+    {
+      "id": "leviathan",
+      "name": "LEVIATHAN",
+      "power": 7500,
+      "price": "28000000000000000000000",
+      "class": 4,
+      "levelRequired": 16,
+      "active": true
+    },
+    {
+      "id": "juggernaut",
+      "name": "JUGGERNAUT",
+      "power": 9200,
+      "price": "34000000000000000000000",
+      "class": 4,
+      "levelRequired": 18,
+      "active": true
+    },
+    {
+      "id": "sovereign",
+      "name": "SOVEREIGN",
+      "power": 11000,
+      "price": "40000000000000000000000",
+      "class": 5,
+      "levelRequired": 20,
+      "active": true
+    },
+    {
+      "id": "meridian",
+      "name": "MERIDIAN",
+      "power": 13000,
+      "price": "47000000000000000000000",
+      "class": 5,
+      "levelRequired": 23,
+      "active": true
+    },
+    {
+      "id": "omega",
+      "name": "OMEGA",
+      "power": 15000,
+      "price": "55000000000000000000000",
+      "class": 5,
+      "levelRequired": 26,
+      "active": true
+    },
+    {
+      "id": "apex",
+      "name": "APEX",
+      "power": 18500,
+      "price": "68000000000000000000000",
+      "class": 5,
+      "levelRequired": 30,
+      "active": true
+    }
+  ],
+  "planets": [
+    {
+      "id": 1,
+      "name": "Aera",
+      "minPower": 90,
+      "recPower": 140,
+      "duration": 30,
+      "rewardMin": "5000000000000000000",
+      "rewardMax": "8000000000000000000",
+      "rareBps": 60,
+      "xp": 20
+    },
+    {
+      "id": 2,
+      "name": "Lyra",
+      "minPower": 130,
+      "recPower": 190,
+      "duration": 60,
+      "rewardMin": "7000000000000000000",
+      "rewardMax": "11000000000000000000",
+      "rareBps": 70,
+      "xp": 49
+    },
+    {
+      "id": 3,
+      "name": "Noma",
+      "minPower": 180,
+      "recPower": 250,
+      "duration": 180,
+      "rewardMin": "10000000000000000000",
+      "rewardMax": "15000000000000000000",
+      "rareBps": 80,
+      "xp": 84
+    },
+    {
+      "id": 4,
+      "name": "Velis",
+      "minPower": 240,
+      "recPower": 330,
+      "duration": 300,
+      "rewardMin": "14000000000000000000",
+      "rewardMax": "21000000000000000000",
+      "rareBps": 90,
+      "xp": 121
+    },
+    {
+      "id": 5,
+      "name": "Thera",
+      "minPower": 300,
+      "recPower": 420,
+      "duration": 480,
+      "rewardMin": "20000000000000000000",
+      "rewardMax": "30000000000000000000",
+      "rareBps": 100,
+      "xp": 162
+    },
+    {
+      "id": 6,
+      "name": "Kryos",
+      "minPower": 380,
+      "recPower": 520,
+      "duration": 600,
+      "rewardMin": "26000000000000000000",
+      "rewardMax": "39000000000000000000",
+      "rareBps": 120,
+      "xp": 205
+    },
+    {
+      "id": 7,
+      "name": "Oryn",
+      "minPower": 470,
+      "recPower": 650,
+      "duration": 900,
+      "rewardMin": "33000000000000000000",
+      "rewardMax": "50000000000000000000",
+      "rareBps": 130,
+      "xp": 251
+    },
+    {
+      "id": 8,
+      "name": "Vara",
+      "minPower": 590,
+      "recPower": 800,
+      "duration": 1200,
+      "rewardMin": "40000000000000000000",
+      "rewardMax": "60000000000000000000",
+      "rareBps": 140,
+      "xp": 300
+    },
+    {
+      "id": 9,
+      "name": "Kelon",
+      "minPower": 730,
+      "recPower": 980,
+      "duration": 1800,
+      "rewardMin": "48000000000000000000",
+      "rewardMax": "72000000000000000000",
+      "rareBps": 150,
+      "xp": 350
+    },
+    {
+      "id": 10,
+      "name": "Tyrax",
+      "minPower": 900,
+      "recPower": 1200,
+      "duration": 2700,
+      "rewardMin": "60000000000000000000",
+      "rewardMax": "90000000000000000000",
+      "rareBps": 160,
+      "xp": 400
+    },
+    {
+      "id": 11,
+      "name": "Solven",
+      "minPower": 1120,
+      "recPower": 1500,
+      "duration": 3600,
+      "rewardMin": "75000000000000000000",
+      "rewardMax": "112000000000000000000",
+      "rareBps": 180,
+      "xp": 452
+    },
+    {
+      "id": 12,
+      "name": "Vanta",
+      "minPower": 1400,
+      "recPower": 1850,
+      "duration": 4500,
+      "rewardMin": "92000000000000000000",
+      "rewardMax": "138000000000000000000",
+      "rareBps": 200,
+      "xp": 506
+    },
+    {
+      "id": 13,
+      "name": "Kaelis",
+      "minPower": 1700,
+      "recPower": 2250,
+      "duration": 5400,
+      "rewardMin": "112000000000000000000",
+      "rewardMax": "168000000000000000000",
+      "rareBps": 220,
+      "xp": 561
+    },
+    {
+      "id": 14,
+      "name": "Myr",
+      "minPower": 2050,
+      "recPower": 2700,
+      "duration": 6300,
+      "rewardMin": "135000000000000000000",
+      "rewardMax": "200000000000000000000",
+      "rareBps": 240,
+      "xp": 618
+    },
+    {
+      "id": 15,
+      "name": "Orionis",
+      "minPower": 2500,
+      "recPower": 3200,
+      "duration": 7200,
+      "rewardMin": "160000000000000000000",
+      "rewardMax": "240000000000000000000",
+      "rareBps": 260,
+      "xp": 677
+    },
+    {
+      "id": 16,
+      "name": "Noxia",
+      "minPower": 2950,
+      "recPower": 3800,
+      "duration": 9000,
+      "rewardMin": "195000000000000000000",
+      "rewardMax": "300000000000000000000",
+      "rareBps": 280,
+      "xp": 737
+    },
+    {
+      "id": 17,
+      "name": "Zeron",
+      "minPower": 3500,
+      "recPower": 4500,
+      "duration": 10800,
+      "rewardMin": "235000000000000000000",
+      "rewardMax": "370000000000000000000",
+      "rareBps": 300,
+      "xp": 800
+    },
+    {
+      "id": 18,
+      "name": "Vorax",
+      "minPower": 4200,
+      "recPower": 5400,
+      "duration": 12600,
+      "rewardMin": "285000000000000000000",
+      "rewardMax": "450000000000000000000",
+      "rareBps": 320,
+      "xp": 863
+    },
+    {
+      "id": 19,
+      "name": "Talvos",
+      "minPower": 5000,
+      "recPower": 6400,
+      "duration": 14400,
+      "rewardMin": "340000000000000000000",
+      "rewardMax": "540000000000000000000",
+      "rareBps": 340,
+      "xp": 928
+    },
+    {
+      "id": 20,
+      "name": "Nexara",
+      "minPower": 6000,
+      "recPower": 7500,
+      "duration": 16200,
+      "rewardMin": "400000000000000000000",
+      "rewardMax": "650000000000000000000",
+      "rareBps": 360,
+      "xp": 994
+    },
+    {
+      "id": 21,
+      "name": "Dravos",
+      "minPower": 7000,
+      "recPower": 8800,
+      "duration": 18000,
+      "rewardMin": "470000000000000000000",
+      "rewardMax": "780000000000000000000",
+      "rareBps": 380,
+      "xp": 1062
+    },
+    {
+      "id": 22,
+      "name": "Pyros",
+      "minPower": 8300,
+      "recPower": 10400,
+      "duration": 21600,
+      "rewardMin": "560000000000000000000",
+      "rewardMax": "920000000000000000000",
+      "rareBps": 400,
+      "xp": 1130
+    },
+    {
+      "id": 23,
+      "name": "Umbra",
+      "minPower": 9800,
+      "recPower": 12300,
+      "duration": 21600,
+      "rewardMin": "660000000000000000000",
+      "rewardMax": "1100000000000000000000",
+      "rareBps": 420,
+      "xp": 1200
+    },
+    {
+      "id": 24,
+      "name": "Cronis",
+      "minPower": 11600,
+      "recPower": 14500,
+      "duration": 25200,
+      "rewardMin": "770000000000000000000",
+      "rewardMax": "1300000000000000000000",
+      "rareBps": 440,
+      "xp": 1271
+    },
+    {
+      "id": 25,
+      "name": "Helion",
+      "minPower": 14000,
+      "recPower": 17000,
+      "duration": 28800,
+      "rewardMin": "900000000000000000000",
+      "rewardMax": "1500000000000000000000",
+      "rareBps": 460,
+      "xp": 1343
+    },
+    {
+      "id": 26,
+      "name": "Obsidia",
+      "minPower": 16500,
+      "recPower": 20500,
+      "duration": 21600,
+      "rewardMin": "1100000000000000000000",
+      "rewardMax": "1900000000000000000000",
+      "rareBps": 480,
+      "xp": 1418
+    },
+    {
+      "id": 27,
+      "name": "Xeron",
+      "minPower": 19800,
+      "recPower": 24500,
+      "duration": 21600,
+      "rewardMin": "1350000000000000000000",
+      "rewardMax": "2400000000000000000000",
+      "rareBps": 500,
+      "xp": 1495
+    },
+    {
+      "id": 28,
+      "name": "Titanis",
+      "minPower": 23800,
+      "recPower": 29500,
+      "duration": 36000,
+      "rewardMin": "1650000000000000000000",
+      "rewardMax": "3000000000000000000000",
+      "rareBps": 520,
+      "xp": 1572
+    },
+    {
+      "id": 29,
+      "name": "Abyss",
+      "minPower": 29200,
+      "recPower": 36500,
+      "duration": 43200,
+      "rewardMin": "2050000000000000000000",
+      "rewardMax": "3900000000000000000000",
+      "rareBps": 550,
+      "xp": 1650
+    },
+    {
+      "id": 30,
+      "name": "Eclipse",
+      "minPower": 35000,
+      "recPower": 45000,
+      "duration": 28800,
+      "rewardMin": "2500000000000000000000",
+      "rewardMax": "5000000000000000000000",
+      "rareBps": 600,
+      "xp": 1750
+    }
+  ]
+}

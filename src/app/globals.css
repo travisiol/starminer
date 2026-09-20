@@ -1,0 +1,392 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   STARMINER — design tokens.
+   Web3 space: deep indigo black, violet glow, glass panels, white type.
+   Planets carry their own colours; the UI is violet on near-black.
+   Everything sits inside a layer so utilities always win (see @layer order).
+   ------------------------------------------------------------------ */
+
+@theme {
+  --color-void: #06050c;
+  --color-ink: #0b0916;
+  --color-panel: #130f24;
+  --color-graphite: #2a2347;
+  --color-line: #1f1938;
+  --color-text: #f4f1ff;
+  --color-muted: #9b93bd;
+  --color-dim: #6a6390;
+  --color-accent: #a78bfa;
+  --color-accent-2: #7c3aed;
+  --color-magenta: #e879f9;
+  --color-gold: #f5c76a;
+  --color-danger: #fb7185;
+
+  --color-easy: #4ade80;
+  --color-normal: #a78bfa;
+  --color-hard: #fbbf24;
+  --color-dangerous: #fb923c;
+  --color-extreme: #f43f5e;
+  --color-anomaly: #e879f9;
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-void);
+    background-image:
+      radial-gradient(60% 45% at 15% 0%, rgba(124, 58, 237, 0.28), transparent 70%),
+      radial-gradient(45% 40% at 90% 10%, rgba(232, 121, 249, 0.14), transparent 70%),
+      radial-gradient(70% 60% at 50% 110%, rgba(76, 29, 149, 0.35), transparent 70%);
+    background-attachment: fixed;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1, "cv11" 1, "ss01" 1;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 40%, transparent);
+  }
+  :focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+  input,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  /* Type */
+  .display {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+  .display-wide {
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .label-strong {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+  .mono {
+    font-family: var(--font-mono);
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .glow-text {
+    text-shadow: 0 0 24px rgba(167, 139, 250, 0.45);
+  }
+  .gradient-text {
+    background: linear-gradient(92deg, #f4f1ff 0%, #c4b5fd 45%, #e879f9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Surfaces */
+  .panel {
+    background: linear-gradient(180deg, rgba(167, 139, 250, 0.06), rgba(19, 15, 36, 0.85));
+    border: 1px solid rgba(167, 139, 250, 0.16);
+    border-radius: var(--radius-md);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 10px 40px -24px rgba(124, 58, 237, 0.6);
+  }
+  .glass {
+    background: rgba(11, 9, 22, 0.66);
+    backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgba(167, 139, 250, 0.18);
+    border-radius: var(--radius-md);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 24px 60px -30px rgba(76, 29, 149, 0.9);
+  }
+  .glass-strong {
+    background: rgba(11, 9, 22, 0.88);
+    backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(167, 139, 250, 0.22);
+    border-radius: var(--radius-lg);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 30px 80px -30px rgba(124, 58, 237, 0.7);
+  }
+  .hairline {
+    border-top: 1px solid var(--color-line);
+  }
+  .halo {
+    box-shadow:
+      0 0 0 1px rgba(167, 139, 250, 0.35),
+      0 0 32px rgba(124, 58, 237, 0.35);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 44px;
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      color 0.2s,
+      box-shadow 0.25s,
+      transform 0.2s var(--ease-expo),
+      opacity 0.2s;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    transform: none;
+    box-shadow: none;
+  }
+  .btn-sm {
+    height: 36px;
+    padding: 0 0.9rem;
+    font-size: 11px;
+  }
+  .btn-xs {
+    height: 30px;
+    padding: 0 0.7rem;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+  .btn-primary {
+    background: linear-gradient(92deg, #7c3aed 0%, #a855f7 55%, #e879f9 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 28px -10px rgba(168, 85, 247, 0.85);
+  }
+  .btn-primary:hover:not(:disabled) {
+    box-shadow: 0 10px 34px -8px rgba(232, 121, 249, 0.9);
+    filter: brightness(1.08);
+  }
+  .btn-accent {
+    background: var(--color-accent);
+    color: var(--color-void);
+    border: 1px solid var(--color-accent);
+  }
+  .btn-accent:hover:not(:disabled) {
+    background: #c4b5fd;
+  }
+  .btn-ghost {
+    background: rgba(167, 139, 250, 0.06);
+    border: 1px solid rgba(167, 139, 250, 0.24);
+    color: var(--color-text);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: rgba(167, 139, 250, 0.12);
+    border-color: rgba(196, 181, 253, 0.5);
+  }
+  .btn-danger {
+    background: color-mix(in oklab, var(--color-danger) 18%, transparent);
+    border: 1px solid color-mix(in oklab, var(--color-danger) 50%, transparent);
+    color: #fecdd3;
+  }
+
+  /* Chips & tags */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 22px;
+    padding: 0 0.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(167, 139, 250, 0.22);
+    background: rgba(167, 139, 250, 0.07);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+  .dot-live {
+    background: var(--color-easy);
+    box-shadow: 0 0 8px var(--color-easy);
+  }
+
+  /* Difficulty colour classes — used by tags and meters */
+  .diff-easy { color: var(--color-easy); }
+  .diff-normal { color: var(--color-normal); }
+  .diff-hard { color: var(--color-hard); }
+  .diff-dangerous { color: var(--color-dangerous); }
+  .diff-extreme { color: var(--color-extreme); }
+  .diff-anomaly { color: var(--color-anomaly); }
+  .bg-diff-easy { background: var(--color-easy); }
+  .bg-diff-normal { background: var(--color-normal); }
+  .bg-diff-hard { background: var(--color-hard); }
+  .bg-diff-dangerous { background: var(--color-dangerous); }
+  .bg-diff-extreme { background: var(--color-extreme); }
+  .bg-diff-anomaly { background: var(--color-anomaly); }
+
+  /* Meter */
+  .meter {
+    position: relative;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(167, 139, 250, 0.12);
+    overflow: hidden;
+  }
+  .meter > span {
+    position: absolute;
+    inset: 0 auto 0 0;
+    border-radius: inherit;
+    transition: width 0.6s var(--ease-expo);
+    box-shadow: 0 0 12px currentColor;
+  }
+
+  /* Inputs */
+  .input {
+    height: 40px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(167, 139, 250, 0.24);
+    background: rgba(6, 5, 12, 0.6);
+    padding: 0 0.8rem;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.18);
+  }
+
+  /* Scroll areas */
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-graphite) transparent;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Section rhythm */
+  .section {
+    padding: clamp(4rem, 9vw, 8rem) 0;
+  }
+  .container-x {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 40px);
+  }
+
+  /* Mount reveals as CSS animation — plays on the first paint, no hydration needed */
+  .fade-up {
+    animation: fade-up 0.9s var(--ease-expo) both;
+  }
+  .fade-up-2 { animation-delay: 0.12s; }
+  .fade-up-3 { animation-delay: 0.24s; }
+  .fade-up-4 { animation-delay: 0.36s; }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-soft {
+    animation: pulse-soft 2.4s ease-in-out infinite;
+  }
+  .animate-spin-slow {
+    animation: spin-slow 14s linear infinite;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

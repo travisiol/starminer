@@ -1,0 +1,29 @@
+# dependencies (any depth)
+node_modules/
+.pnp
+.pnp.*
+
+# next.js
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# env — keep the template
+.env*
+!.env.example
+
+# captures, logs, scratch
+/docs/captures/
+*.log
+.DS_Store
+.vercel
+
+.vercel
+
+# contracts (hardhat)
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+contracts/deployments/local.json
